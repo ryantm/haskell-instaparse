@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 import Data.Map (Map)
 import Data.Set (Set)
 
@@ -10,11 +9,11 @@ data Descriptor = Descriptor Label Node Integer
 data UDescriptor = UDescriptor Label Node Integer
 data PDescriptor = PDescriptor Node Integer
 
-data State = State { nodes ∷ [Node]
-                   , node_label ∷ Map Node Label
-                   , node_children ∷ Map Node [Node]
-                   , r ∷ [Descriptor]
-                   , u ∷ [Set UDescriptor]
-                   , u0 ∷ Node
-                   , p ∷ Set PDescriptor
+data State = State { nodes :: [Node]
+                   , node_label :: Map Node Label
+                   , node_children :: Map Node [Node]
+                   , r :: [Descriptor]
+                   , u :: [Set UDescriptor]
+                   , u0 :: Node
+                   , p :: Set PDescriptor
                    }
