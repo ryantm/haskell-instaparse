@@ -1,7 +1,14 @@
-import Data.Map (Map)
-import Data.Set (Set)
+import qualified Data.Map as Map
+import qualified Data.Set as Set
 
-main = putStrLn "Hi"
+main = 
+    -- let m = 2
+    --     i = "aa" ++ "$"
+    --     p = Set.empty
+    --     r = Set.empty
+    --     uj = 
+        
+    putStrLn "Hi"
 
 type Node = Integer
 type Label = String
@@ -10,10 +17,10 @@ data UDescriptor = UDescriptor Label Node Integer
 data PDescriptor = PDescriptor Node Integer
 
 data State = State { nodes :: [Node]
-                   , node_label :: Map Node Label
-                   , node_children :: Map Node [Node]
+                   , node_label :: Map.Map Node Label
+                   , node_children :: Map.Map Node [Node]
                    , r :: [Descriptor]
-                   , u :: [Set UDescriptor]
+                   , u :: [Set.Set UDescriptor]
                    , u0 :: Node
-                   , p :: Set PDescriptor
+                   , p :: Set.Set PDescriptor
                    }
